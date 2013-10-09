@@ -2,7 +2,7 @@
 /**
  * This file is loaded automatically by the app/webroot/index.php file after core.php
  *
- * This file should load/create any application wide configuration settings, such as
+ * This file should load/create any application wide configuration settings, such as 
  * Caching, Logging, loading additional configuration files.
  *
  * You should also use this file to include any files that provide global functions/constants
@@ -11,17 +11,16 @@
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       app.Config
  * @since         CakePHP(tm) v 0.10.8.2117
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 // Setup a 'default' cache configuration for use in the application.
@@ -31,27 +30,24 @@ Cache::config('default', array('engine' => 'File'));
  * The settings below can be used to set additional paths to models, views and controllers.
  *
  * App::build(array(
- *     'Model'                     => array('/path/to/models/', '/next/path/to/models/'),
- *     'Model/Behavior'            => array('/path/to/behaviors/', '/next/path/to/behaviors/'),
- *     'Model/Datasource'          => array('/path/to/datasources/', '/next/path/to/datasources/'),
- *     'Model/Datasource/Database' => array('/path/to/databases/', '/next/path/to/database/'),
- *     'Model/Datasource/Session'  => array('/path/to/sessions/', '/next/path/to/sessions/'),
- *     'Controller'                => array('/path/to/controllers/', '/next/path/to/controllers/'),
- *     'Controller/Component'      => array('/path/to/components/', '/next/path/to/components/'),
- *     'Controller/Component/Auth' => array('/path/to/auths/', '/next/path/to/auths/'),
- *     'Controller/Component/Acl'  => array('/path/to/acls/', '/next/path/to/acls/'),
- *     'View'                      => array('/path/to/views/', '/next/path/to/views/'),
- *     'View/Helper'               => array('/path/to/helpers/', '/next/path/to/helpers/'),
- *     'Console'                   => array('/path/to/consoles/', '/next/path/to/consoles/'),
- *     'Console/Command'           => array('/path/to/commands/', '/next/path/to/commands/'),
- *     'Console/Command/Task'      => array('/path/to/tasks/', '/next/path/to/tasks/'),
- *     'Lib'                       => array('/path/to/libs/', '/next/path/to/libs/'),
- *     'Locale'                    => array('/path/to/locales/', '/next/path/to/locales/'),
- *     'Vendor'                    => array('/path/to/vendors/', '/next/path/to/vendors/'),
- *     'Plugin'                    => array('/path/to/plugins/', '/next/path/to/plugins/'),
+ *     'Plugin' => array('/full/path/to/plugins/', '/next/full/path/to/plugins/'),
+ *     'Model' =>  array('/full/path/to/models/', '/next/full/path/to/models/'),
+ *     'View' => array('/full/path/to/views/', '/next/full/path/to/views/'),
+ *     'Controller' => array('/full/path/to/controllers/', '/next/full/path/to/controllers/'),
+ *     'Model/Datasource' => array('/full/path/to/datasources/', '/next/full/path/to/datasources/'),
+ *     'Model/Behavior' => array('/full/path/to/behaviors/', '/next/full/path/to/behaviors/'),
+ *     'Controller/Component' => array('/full/path/to/components/', '/next/full/path/to/components/'),
+ *     'View/Helper' => array('/full/path/to/helpers/', '/next/full/path/to/helpers/'),
+ *     'Vendor' => array('/full/path/to/vendors/', '/next/full/path/to/vendors/'),
+ *     'Console/Command' => array('/full/path/to/shells/', '/next/full/path/to/shells/'),
+ *     'locales' => array('/full/path/to/locale/', '/next/full/path/to/locale/')
  * ));
  *
  */
+
+App::build(array(
+	'Plugin' => array(ROOT . DS . 'plugins' . DS)
+));
 
 /**
  * Custom Inflector rules, can be set to correctly pluralize or singularize table, model, controller names or whatever other
@@ -71,9 +67,12 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
+CakePlugin::load('Migrations');
+CakePlugin::load('Adminable', array('bootstrap' => true));
+
 
 /**
- * You can attach event listeners to the request lifecycle as Dispatcher Filter . By Default CakePHP bundles two filters:
+ * You can attach event listeners to the request lifecyle as Dispatcher Filter . By Default CakePHP bundles two filters:
  *
  * - AssetDispatcher filter will serve your asset files (css, images, js, etc) from your themes and plugins
  * - CacheDispatcher filter will read the Cache.check configure variable and try to serve cached content generated from controllers
@@ -98,12 +97,12 @@ Configure::write('Dispatcher.filters', array(
  */
 App::uses('CakeLog', 'Log');
 CakeLog::config('debug', array(
-	'engine' => 'File',
+	'engine' => 'FileLog',
 	'types' => array('notice', 'info', 'debug'),
 	'file' => 'debug',
 ));
 CakeLog::config('error', array(
-	'engine' => 'File',
+	'engine' => 'FileLog',
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));

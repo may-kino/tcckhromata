@@ -1,0 +1,11 @@
+Project Template
+
+primeiro passo:
+
+git clone url-do-projeto
+git submodule init
+git submodule update
+
+segundo passo:
+
+edite o build.xml, adicione o nome do projeto no atributo [project name="NomeDoProjeto"]
