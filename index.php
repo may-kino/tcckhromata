@@ -37,4 +37,5 @@
 		define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'cakephp' . DS . 'lib');
 	}
 /**teste*/
+/**mayra*/
 	require APP_DIR . DS . WEBROOT_DIR . DS . 'index.php';
