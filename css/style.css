@@ -1,0 +1,124 @@
+/* Geral */
+/* Header */
+/* Footer */
+/* Responsivo */
+
+/* Perfil */
+/* Search */
+/* Produto */
+
+@import url('reset.css');
+html,body {height: 100%; background-color:#F9F9F9; font-family: Arial, Helvetica, sans-serif;}
+body{background:url("../img/fundo_khromata.png") 48px 20px repeat;}
+hr {border-top:2px solid #F9F9F9; margin:5px;}
+@font-face {
+    font-family: 'patinio_basica';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/PatinioBasica.ttf');
+}
+
+h1{font:200px 'patinio_basica'; text-align:center; color:#999;}
+h2{font:20px Arial, Helvetica, sans-serif; text-align:left;}
+h3{font:16px Arial, Helvetica, sans-serif; text-align:left;}
+p{font:12px Arial, Helvetica, sans-serif; padding-top:5px; pading-bottom:5px;}
+
+
+
+
+
+
+
+
+
+form{margin:auto;}
+.navbar{background-color:#6CF; position:fixed; min-height:45px; width:100%;border-bottom:#e2e2e2 solid 1px;box-shadow: 1px 1px 1px #e2e2e2;-moz-linear-gradient: 1px 1px 1px #e2e2e2;-webkit-gradient: 1px 1px 1px #e2e2e2;}
+.wrap {min-height: 100%;height: auto !important;height: 100%;margin: 0 auto -20px;}
+.wrap > .container { padding-top: 40px;}
+.push,.footer {height: 20px;}
+.footer {font-size:10px;} footer p{text-align:center;}
+.left{text-align:right;}
+.right{text-align:left;}
+.cinza{background-color:#ccc;}
+.logo{height:100%;}
+.bola{text-align:center;}
+.azul {background-color:#6CF} .azul:hover{background-color:#6C9;}
+.branco{background-color:#FFF;}
+.caixatexto{width:100%; height:50%;}
+.caixacadastro{width:auto; height:250px; background-color:#fff;}
+.logo_navbar{margin-top:5px; text-align:center;font:30px'patinio_basica'; color:#F9F9F9;}.logo_navbar_index{margin-top:5px;float:left;font:30px'patinio_basica'; color:#F9F9F9;}
+.login{margin-top:5px; float:right;}
+.avatar{float:left; border:5px solid #fff;}
+.avatar_produto {text-align:center;border:5px solid #fff; position:relative; margin-left:36%; top:-150px;}
+.img_topo{max-height:300px;}
+.img-ret{}
+.topo{float:right;}
+.perfil{margin-top:30px;}
+.about_perfil{ margin-left:40px; margin-top:20px; height:100px; width:85%; padding:10px;}
+.about_produto{max-height:250px;}
+.txt_about_perfil{font:28px Arial, Helvetica, sans-serif; padding-top:10px; padding-left:10px;}
+.atalhos_about_perfil{float:right;margin-top: -35px;} .atalhos_about_perfil ul{list-style:none; border-left:#F9F9F9 2px solid; padding-left:30px;} .atalhos_about_perfil ul li{text-align:right; padding-bottom:10px; cursor:pointer; color:#7C7C7C; font:14px Arial, Helvetica, sans-serif; } .atalhos_about_perfil ul li:hover{color:#000;}
+.ctd_cpessoal, .ctd_wishlist, .ctd_produto{margin-left:40px; width:85%; min-height:200px; padding:10px;}
+.search{padding-right:10px; padding-top:8px; max-width:300px;}
+.btn_perfil{padding-right:10px; padding-top:2px; float:right;}
+.logo_topo{padding-top:50px;}
+.about_perfil, .ctd_cpessoal, .ctd_wishlist, .ctd_produto,{max-width:900px;}
+
+.ctd .img-rounded{margin:5px;}
+
+.ctd_cpessoal h3:before{content:'\2665'; font-size:12px; text-align:center; vertical-align:middle;}
+.ctd_wishlist h3:before{content:'\2605'; font-size:12px; text-align:center; vertical-align:middle;}
+
+.btn_login{float:right; padding-top:2px; cursor:pointer;}
+
+.btn_ok{-webkit-border-radius:500px;-moz-border-radius:500px;border-radius:500px; height:25px; width:25px;color:#000; font: 15px Georgia, "Times New Roman", Times, serif;background-color:#FFF; border:none;padding-bottom:5px; margin-bottom:10px; cursor:pointer;} .btn_ok:active, .btn_ok.active{background-color:#000; color:#FFF;}
+input.field_password, input.field_login{background-color:#aee2fc;border:none;}
+input[type="text"], input[type="password"]{box-shadow: none;text-decoration: none; border-style:none;color:#000; -webkit-border-radius: 1px;
+-moz-border-radius: 1px;border-radius: 1px;}input [type="text"]:focus, input [type="password"]:focus{box-shadow: none;text-decoration: none; border-style:none;color:#000;}
+input[type="text"]:focus::-webkit-input-placeholder { color:transparent; }input[type="password"]:focus::-webkit-input-placeholder { color:transparent; }
+input[type="text"]:focus::-moz-placeholder { color:transparent; }input[type="password"]:focus::-webkit-input-placeholder { color:transparent; }
+
+
+
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
+color: #fff;
+text-decoration: none;
+background-color: #CCC;
+background-image:none;
+background-image:none;
+background-image:none;
+background-image:none;
+background-image:none;
+background-repeat: none;
+filter:none;
+}
+
+
+
+
+
+
+.procure:hover 
+.liste:hover 
+
+.compartilhe:hover{background:url("../img/chanel2pb.png") 250px 250px no-repeat;}
+
+.produto {margin-top:30px;}
+.about_produto_l {height:100px; width:87%; max-width:900px;margin-top:50px;margin-left:40px;}
+.sobre_produto {margin-top:-40px;} .sobre_produto_swatche, .sobre_produto_mais{margin-top:30px;}
+.txt_about_produto_r {float:right; margin-right: 18%;margin-top: -3%;text-align:center;}.txt_about_produto_l {margin-left:15%; padding-top:5%;}
+.review_produto{padding-left:40px;}
+.dupe_produto{padding-right:60px;}
+
+      @media (max-width: 767px) {
+        .footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+		.navbar-fixed-top{
+		margin-right:auto;
+		margin-left:auto;
+      }
